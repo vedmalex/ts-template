@@ -18,3 +18,5 @@ see more info [ts-macro](https://googlefeud.github.io/ts-macros/index.html)
 to start using run:
 
 npm run clean:template
+all demo files wil be moved to backup folder
+

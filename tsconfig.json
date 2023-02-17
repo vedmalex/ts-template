@@ -37,6 +37,6 @@
       // "~/*": ["./src/*"] // алиас для корневой директории
     }
   },
-  "include": ["src/**/*", "types/**/*.d.ts"],
-  "exclude": ["**/__tests__"]
+  "include": ["./src/**/*", "types/**/*.d.ts"],
+  "exclude": ["./src/__tests__"]
 }
