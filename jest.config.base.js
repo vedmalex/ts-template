@@ -8,10 +8,13 @@ module.exports = {
   testPathIgnorePatterns: ['/node_modules/', '/dist/'],
   moduleFileExtensions: [...defaults.moduleFileExtensions, 'ts', 'tsx'],
   clearMocks: true,
-  globals: {
-    'ts-jest': {
-      tsconfig: '<rootDir>/tsconfig.json',
-      diagnostics: false,
-    },
+  transform: {
+    '(/__tests__/.*|(\\.|/)(test|spec))\\.(tsx?|jsx?)$': [
+      'ts-jest',
+      {
+        compiler: 'ttypescript',
+        /* ts-jest config goes here in Jest */
+      },
+    ],
   },
 }

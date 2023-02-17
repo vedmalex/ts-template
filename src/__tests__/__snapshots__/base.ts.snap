@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`user is created creates User: user 1`] = `
+User {
+  "email": "vedmalex[at]gmail.com",
+  "user": "Alex",
+}
+`;

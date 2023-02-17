@@ -1,0 +1,2 @@
+(()=>{"use strict";var e={452:(e,r)=>{Object.defineProperty(r,"__esModule",{value:!0}),r.User=void 0,r.User=class{constructor(e,r){this.userName=e,this.email=r}}},861:(e,r)=>{Object.defineProperty(r,"__esModule",{value:!0})}},r={};function o(t){var s=r[t];if(void 0!==s)return s.exports;var l=r[t]={exports:{}};return e[t](l,l.exports,o),l.exports}(()=>{const e=o(452),r=(o(861),new e.User("Alex Vedmedenko","vedmalex[at]gmail[dot]com"));console.log(` Hello world from ${r.userName}! mail me ${r.email} true`)})()})();
+//# sourceMappingURL=index.js.map
