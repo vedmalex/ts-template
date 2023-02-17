@@ -1,17 +1,21 @@
 {
-  "name": "@grainjs/ts-template-main",
+  "name": "ts-template-main",
   "version": "0.80.0-beta.4",
   "author": {
     "name": "Alex Vedmedenko",
     "email": "vedmalex@gmail.com"
   },
   "main": "./dist/index.js",
+  "module": "./dist/index.module.js",
+  "types": "types/",
   "dependencies": {},
   "devDependencies": {
     "@types/jest": "^29.4.0",
-    "@types/node": "18.13.0",
+    "@types/node": "^18.13.0",
+    "@types/webpack": "^5.28.0",
     "@typescript-eslint/eslint-plugin": "5.52.0",
     "@typescript-eslint/parser": "5.52.0",
+    "clean-webpack-plugin": "^4.0.0",
     "eslint": "^8.34.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
@@ -28,12 +32,13 @@
     "webpack-cli": "^5.0.1"
   },
   "scripts": {
-    "watch": "webpack --watch --config webpack.config.js",
+    "clean:template": "node clean.to.be.deleted.js",
+    "prepublish": "webpack --config webpack.config.js --mode=production",
+    "watch": "webpack --watch --config webpack.config.js --mode=development",
+    "debug": "node --inspect-brk dist/index.ts",
     "dev": "node dist/index.js",
     "test": "jest --coverage",
-    "clean": "git clean -dfqX -- ./node_modules **/{dist,node_modules}/",
-    "compile": "ttsc --build tsconfig.json",
-    "compile:clean": "ttsc --build tsconfig.json --clean",
+    "compile": "webpack --config webpack.config.js",
     "format": "prettier --write \"src/**/*.ts\""
   }
 }

@@ -1,11 +1,20 @@
 # ts-template
 
-template project for TS developemts
+template project for JS/TS developemts
 
 jest with code coverage support
 
-supports aliases with helo of [ttypescript](https://www.npmjs.com/package/ttypescript)
+it uses WebPack 5 as far as it support ts-macro
+
+it make treeshaking
+
+expose types of generated files into separate directory
+
+make possible to build different types of output files
 
 Update to be used with [ts-macros](https://github.com/GoogleFeud/ts-macros)
-
 see more info [ts-macro](https://googlefeud.github.io/ts-macros/index.html)
+
+to start using run:
+
+npm run clean:template
