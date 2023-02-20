@@ -13,7 +13,6 @@
     "@rollup/plugin-typescript": "^11.0.0",
     "@types/jest": "^29.4.0",
     "@types/node": "^18.13.0",
-    "@types/webpack": "^5.28.0",
     "@typescript-eslint/eslint-plugin": "5.52.0",
     "@typescript-eslint/parser": "5.52.0",
     "eslint": "^8.34.0",
@@ -34,11 +33,10 @@
     "build": "vite build",
     "clean:template": "node clean.to.be.deleted.js",
     "prepublish": "vite build",
-    "watch": "vite",
+    "watch": "tsc --",
     "debug": "node --inspect-brk dist/index.ts",
     "dev": "node dist/index.js",
     "test": "jest --coverage",
-    "compile": "webpack --config webpack.config.js",
     "format": "prettier --write \"src/**/*.ts\""
   }
 }

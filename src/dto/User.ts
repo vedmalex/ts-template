@@ -1,3 +1,8 @@
 export class User {
-  constructor(public userName: string, public email: string) {}
+  get fullName(): string {
+    return `name: ${this.userName} email: ${this.email}`
+  }
+  constructor(public userName: string, public email: string) {
+    console.log('done')
+  }
 }

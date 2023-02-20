@@ -1,6 +1,9 @@
 class m {
-  constructor(o, l) {
-    this.userName = o, this.email = l;
+  get fullName() {
+    return `name: ${this.userName} email: ${this.email}`;
+  }
+  constructor(l, o) {
+    this.userName = l, this.email = o, console.log("done");
   }
 }
 {

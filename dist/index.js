@@ -1,2 +1,2 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});class o{constructor(l,r){this.userName=l,this.email=r}}{const e=new o("Alex Vedmedenko","vedmalex[at]gmail[dot]com");console.log(` Hello world from true ${e.userName}! mail me ${e.email} ${!0}`)}exports.User=o;
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});class l{get fullName(){return`name: ${this.userName} email: ${this.email}`}constructor(o,t){this.userName=o,this.email=t,console.log("done")}}{const e=new l("Alex Vedmedenko","vedmalex[at]gmail[dot]com");console.log(` Hello world from true ${e.userName}! mail me ${e.email} ${!0}`)}exports.User=l;
 //# sourceMappingURL=index.js.map
