@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
     "composite": true,
-    "module": "commonjs",
+    "module": "ESNext",
     "esModuleInterop": true,
-    "sourceMap": true,
+    "sourceMap": false,
     "declaration": true,
     "importHelpers": true,
     "declarationMap": true,
@@ -28,15 +28,16 @@
     "moduleResolution": "node",
     "types": ["node", "jest"],
     "baseUrl": ".",
-    "outDir": "types",
+    "outDir": "dist",
     "rootDir": "src",
     "allowJs": true,
+    "emitDeclarationOnly": true,
     "paths": {
       "@DTO/*": ["./src/dto/*"] // алиас для DTO
       // "@/*": ["./*"], // алиас для текущей директории
       // "~/*": ["./src/*"] // алиас для корневой директории
     }
   },
-  "include": ["./src/**/*", "types/**/*.d.ts"],
+  "include": ["./src/**/*", "types/global.d.ts"],
   "exclude": ["./src/__tests__"]
 }

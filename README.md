@@ -20,3 +20,14 @@ to start using run:
 npm run clean:template
 all demo files wil be moved to backup folder
 
+compile parameters
+
+--env targets=node,web,esm --mode=production --env noclean
+
+available target
+
+- node
+- web
+- esm
+
+they can be extended in script

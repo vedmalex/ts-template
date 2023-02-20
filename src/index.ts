@@ -1,6 +1,8 @@
 import { User } from '@DTO/User'
 import { $contains } from './macro/contains'
 
+export { User }
+
 if (!PROD) {
   const user = new User('Alex Vedmedenko', 'vedmalex[at]gmail[dot]com')
   // macro sample

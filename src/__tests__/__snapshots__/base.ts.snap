@@ -3,6 +3,6 @@
 exports[`user is created creates User: user 1`] = `
 User {
   "email": "vedmalex[at]gmail.com",
-  "user": "Alex",
+  "userName": "Alex",
 }
 `;

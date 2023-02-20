@@ -2,13 +2,7 @@
 const fs = require('fs')
 const { join } = require('path')
 
-const move = [
-  './types/',
-  './src',
-  './dist',
-  './tsconfig.json',
-  './clean.to.be.deleted.js',
-]
+const move = ['./src', './dist', './tsconfig.json', './clean.to.be.deleted.js']
 
 if (!fs.existsSync('./backup')) {
   fs.mkdirSync('./backup')
@@ -27,10 +21,9 @@ move.forEach(file => {
 fs.writeFileSync('./tsconfig.json', JSON.stringify(tsConfig, null, 2))
 
 fs.mkdirSync('src')
-fs.mkdirSync('types')
 fs.writeFileSync('./src/index.ts', `// root file for your project`)
 fs.writeFileSync(
-  './types/global.d.ts',
+  './src/global.d.ts',
   `//
 // root file for your types you can make declarations here
 // declare const PRODUCTION: string`,
