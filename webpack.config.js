@@ -3,7 +3,9 @@ const webpack = require('webpack')
 const TsMacros = require('ts-macros').default
 const DtsBundleWebpack = require('dts-bundle-webpack')
 const nodeExternals = require('webpack-node-externals')
+const { readFileSync } = require('node:fs')
 
+const packageJson = JSON.parse(readFileSync('./package.json').toString())
 /**
  * @enum {string}
  */
@@ -16,7 +18,7 @@ const Target = {
 
 const dtsOptions = {
   // name of module like in package.json
-  name: 'ts-template',
+  name: `${packageJson.name}`,
   main: 'types/**/*.d.ts',
   out: '../dist/index.d.ts',
   referenceExternals: true,
