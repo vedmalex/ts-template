@@ -38,12 +38,13 @@
   "scripts": {
     "clean:template": "node clean.to.be.deleted.js",
     "depcheck": "madge ./src",
+    "clean": "git clean -dfqX -- ./node_modules **/{dist,node_modules}/",
+    "build": "webpack --config webpack.config.js --mode=production --env targets=node",
     "prepublish": "webpack --config webpack.config.js --mode=production",
     "watch": "webpack --watch --config webpack.config.js --mode=development",
     "debug": "node --inspect-brk dist/index.ts",
     "dev": "node dist/index.js",
     "test": "jest --coverage",
-    "compile": "webpack --config webpack.config.js",
     "format": "prettier --write \"src/**/*.ts\""
   }
 }
