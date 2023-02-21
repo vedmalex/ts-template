@@ -24,6 +24,7 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-unicorn": "^45.0.2",
     "jest": "^29.4.3",
+    "madge": "^6.0.0",
     "prettier": "^2.8.4",
     "ts-jest": "^29.0.5",
     "ts-loader": "^9.4.2",
@@ -31,10 +32,12 @@
     "ts-node": "^10.9.1",
     "typescript": "next",
     "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.1"
+    "webpack-cli": "^5.0.1",
+    "webpack-node-externals": "^3.0.0"
   },
   "scripts": {
     "clean:template": "node clean.to.be.deleted.js",
+    "depcheck": "madge ./src",
     "prepublish": "webpack --config webpack.config.js --mode=production",
     "watch": "webpack --watch --config webpack.config.js --mode=development",
     "debug": "node --inspect-brk dist/index.ts",
