@@ -33,7 +33,7 @@
     "build": "vite build",
     "clean:template": "node clean.to.be.deleted.js",
     "prepublish": "vite build",
-    "watch": "tsc --",
+    "watch": "tsc --watch --noEmit",
     "debug": "node --inspect-brk dist/index.ts",
     "dev": "node dist/index.js",
     "test": "jest --coverage",
