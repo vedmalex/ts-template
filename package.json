@@ -37,11 +37,11 @@
   },
   "scripts": {
     "clean:template": "node clean.to.be.deleted.js",
-    "depcheck": "madge ./src",
+    "depcheck": "madge ./src -j --ts-config tsconfig.json -b src/ > depcheck.json",
     "clean": "git clean -dfqX -- ./node_modules **/{dist,node_modules}/",
     "build": "webpack --config webpack.config.js --mode=production --env targets=node",
     "prepublish": "webpack --config webpack.config.js --mode=production",
-    "watch": "webpack --watch --config webpack.config.js --mode=development",
+    "watch": "tsc --watch --noEmit",
     "debug": "node --inspect-brk dist/index.ts",
     "dev": "node dist/index.js",
     "test": "jest --coverage",
