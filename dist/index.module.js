@@ -1,5 +1,3 @@
-'use strict';
-
 class User {
     get fullName() {
         return `name: ${this.userName} email: ${this.email}`;
@@ -16,5 +14,5 @@ class User {
     console.log(` Hello world from DEV ${user.userName}! mail me ${user.email} ${true}`);
 }
 
-exports.User = User;
-//# sourceMappingURL=index.js.map
+export { User };
+//# sourceMappingURL=index.module.js.map

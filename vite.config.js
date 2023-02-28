@@ -3,6 +3,8 @@ import { defineConfig } from 'vite'
 import packageJson from './package.json'
 import typescript from '@rollup/plugin-typescript'
 import TsMacros from 'ts-macros'
+import nodeResolve from '@rollup/plugin-node-resolve'
+import commonjs from '@rollup/plugin-commonjs'
 
 const getPackageName = () => {
   return packageJson.name
@@ -25,6 +27,12 @@ const fileName = {
 const formats = Object.keys(fileName)
 
 module.exports = defineConfig({
+  resolve: {
+    alias: [
+      { find: '@/', replacement: path.resolve(__dirname) },
+      { find: '~/', replacement: path.resolve(__dirname, 'src') },
+    ],
+  },
   base: './',
   define: {
     PROD: process.env.NODE_ENV == 'production',
@@ -42,6 +50,8 @@ module.exports = defineConfig({
         ],
       },
     }),
+    commonjs(),
+    nodeResolve(),
   ],
   build: {
     emptyOutDir: true,
